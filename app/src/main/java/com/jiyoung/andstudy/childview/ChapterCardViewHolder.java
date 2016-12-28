@@ -8,7 +8,7 @@ import android.widget.TextView;
 import com.jiyoung.andstudy.R;
 import com.jiyoung.andstudy.data.ChapterInfo;
 
-public class CardViewHolder extends RecyclerView.ViewHolder {
+public class ChapterCardViewHolder extends RecyclerView.ViewHolder {
 
     ImageView imgThumb;
     TextView tvTitle;
@@ -16,8 +16,26 @@ public class CardViewHolder extends RecyclerView.ViewHolder {
 
     ChapterInfo chapterInfo;
 
-    public CardViewHolder(View itemView) {
+    public interface OnChapterClickListener {
+        public void onChapterClick(View view, ChapterInfo chapterInfo, int position);
+    }
+
+    OnChapterClickListener clickListener;
+    public void setOnChapterClickListener(OnChapterClickListener clickListener) {
+        this.clickListener = clickListener;
+    }
+
+    public ChapterCardViewHolder(View itemView) {
         super(itemView);
+
+        itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (clickListener != null) {
+                    clickListener.onChapterClick(view, chapterInfo, getAdapterPosition());
+                }
+            }
+        });
 
         imgThumb = (ImageView) itemView.findViewById(R.id.img_thumb);
         tvTitle = (TextView) itemView.findViewById(R.id.tv_title);

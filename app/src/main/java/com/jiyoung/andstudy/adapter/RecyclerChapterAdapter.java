@@ -7,16 +7,33 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jiyoung.andstudy.R;
-import com.jiyoung.andstudy.childview.CardViewHolder;
+import com.jiyoung.andstudy.childview.ChapterCardViewHolder;
 import com.jiyoung.andstudy.data.ChapterInfo;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class RecyclerChapterAdapter extends RecyclerView.Adapter<CardViewHolder> {
+public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardViewHolder>
+    implements  ChapterCardViewHolder.OnChapterClickListener {
 
     List<ChapterInfo> items = new ArrayList<ChapterInfo>();
     Context mContext;
+
+    public interface OnAdapterChapterClickListener {
+        public void onChapterClick(View view, ChapterInfo chapterInfo, int position);
+    }
+
+    OnAdapterChapterClickListener listener;
+    public void setOnAdapterChapterClickListener(OnAdapterChapterClickListener listener) {
+        this.listener = listener;
+    }
+
+    @Override
+    public void onChapterClick(View view, ChapterInfo chapterInfo, int position) {
+        if (this.listener != null) {
+            listener.onChapterClick(view, chapterInfo, position);
+        }
+    }
 
     public RecyclerChapterAdapter(Context context) {
         this.mContext = context;
@@ -31,14 +48,16 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<CardViewHolder>
     }
 
     @Override
-    public CardViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+    public ChapterCardViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
         //Child View를 가지는 ViewHolder 객체를 생성하고 반환함. RecyclerView에 의해 호출됨.
         View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.item_card_view, viewGroup, false);
-        return new CardViewHolder(view);
+        ChapterCardViewHolder holder = new ChapterCardViewHolder(view);
+        holder.setOnChapterClickListener(this);
+        return holder;
     }
 
     @Override
-    public void onBindViewHolder(CardViewHolder holder, int position) {
+    public void onBindViewHolder(ChapterCardViewHolder holder, int position) {
         //onCreateViewHolder로 생성된 ViewHolder 객체에 보여줄 데이터를 설정함.
         holder.setChapterInfo(items.get(position));
     }
