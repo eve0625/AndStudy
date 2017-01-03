@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AndStudy</string>
+    <string name="title_activity_state_change">StateChangeActivity</string>
+    <string name="action_settings">Settings</string>
 </resources>

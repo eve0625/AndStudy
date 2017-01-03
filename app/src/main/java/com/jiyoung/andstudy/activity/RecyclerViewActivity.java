@@ -1,5 +1,6 @@
 package com.jiyoung.andstudy.activity;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -31,7 +32,12 @@ public class RecyclerViewActivity extends AppCompatActivity {
         adapter.setOnAdapterChapterClickListener(new RecyclerChapterAdapter.OnAdapterChapterClickListener() {
             @Override
             public void onChapterClick(View view, ChapterInfo chapterInfo, int position) {
-                Toast.makeText(RecyclerViewActivity.this, chapterInfo.getTitle(), Toast.LENGTH_SHORT).show();
+                if (chapterInfo.getmClass() != null) {
+                    Intent intent = new Intent(RecyclerViewActivity.this, chapterInfo.getmClass());
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(RecyclerViewActivity.this, chapterInfo.getTitle(), Toast.LENGTH_SHORT).show();
+                }
             }
         });
         recyclerView.setAdapter(adapter);

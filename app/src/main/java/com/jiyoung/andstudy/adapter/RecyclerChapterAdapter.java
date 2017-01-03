@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jiyoung.andstudy.R;
+import com.jiyoung.andstudy.activity.StateChangeActivity;
 import com.jiyoung.andstudy.childview.ChapterCardViewHolder;
 import com.jiyoung.andstudy.data.ChapterInfo;
 
@@ -37,7 +38,8 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
 
     public RecyclerChapterAdapter(Context context) {
         this.mContext = context;
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_0), "TEST0", "this is test1. this is test1. this is test1. this is test1."));
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_0), "Activity State",
+                "Activity의 상태변화를 로그를 찍어 확인해보고, 동적 상태 데이터를 저장,복구해본다.", StateChangeActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_1), "TEST1", "this is test1. this is test1. this is test1. this is test1."));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_2), "TEST2", "this is test1. this is test1. this is test1. this is test1."));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_3), "TEST3", "this is test1. this is test1. this is test1. this is test1."));

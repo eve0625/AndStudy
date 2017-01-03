@@ -1,5 +1,6 @@
 package com.jiyoung.andstudy.data;
 
+import android.app.Activity;
 import android.graphics.drawable.Drawable;
 
 public class ChapterInfo {
@@ -7,11 +8,17 @@ public class ChapterInfo {
     Drawable image;
     String title;
     String description;
+    Class mClass;
 
     public ChapterInfo(Drawable image, String title, String description) {
+        this(image, title, description, null);
+    }
+
+    public ChapterInfo(Drawable image, String title, String description, Class mclass) {
         this.image = image;
         this.title = title;
         this.description = description;
+        this.mClass = mclass;
     }
 
     public Drawable getImage() {
@@ -36,5 +43,13 @@ public class ChapterInfo {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Class getmClass() {
+        return mClass;
+    }
+
+    public void setmClass(Class mClass) {
+        this.mClass = mClass;
     }
 }
