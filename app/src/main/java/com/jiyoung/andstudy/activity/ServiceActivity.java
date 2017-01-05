@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.jiyoung.andstudy.R;
+import com.jiyoung.andstudy.service.MyIntentService;
 import com.jiyoung.andstudy.service.MyService;
 
 public class ServiceActivity extends AppCompatActivity {
@@ -32,6 +33,15 @@ public class ServiceActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ServiceActivity.this, MyService.class);
                 stopService(intent); //구동중인 Service 클래스의 onDestroy가 호출됨
+            }
+        });
+
+        btn = (Button) findViewById(R.id.btn_start_intent_service);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ServiceActivity.this, MyIntentService.class);
+                startService(intent);
             }
         });
     }
