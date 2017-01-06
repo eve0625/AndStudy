@@ -24,11 +24,24 @@
         <service
             android:name=".service.MyService"
             android:enabled="true"
-            android:exported="true"></service>
-
+            android:exported="true" />
         <service android:name=".service.MyIntentService" />
 
-        <activity android:name=".activity.ServiceActivity"></activity>
+        <activity android:name=".activity.ServiceActivity" />
+        <activity android:name=".activity.BoundServiceActivity" />
+
+        <service
+            android:name=".service.BoundService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".activity.RemoteBoundServiceActivity" />
+
+        <service
+            android:name=".service.RemoteBoundService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":my_process"></service>
     </application>
 
 </manifest>
