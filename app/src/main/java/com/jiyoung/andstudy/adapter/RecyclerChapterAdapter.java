@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 
 import com.jiyoung.andstudy.R;
 import com.jiyoung.andstudy.activity.BoundServiceActivity;
+import com.jiyoung.andstudy.activity.CommonGesturesActivity;
+import com.jiyoung.andstudy.activity.MotionEventActivity;
 import com.jiyoung.andstudy.activity.RemoteBoundServiceActivity;
 import com.jiyoung.andstudy.activity.StateChangeActivity;
 import com.jiyoung.andstudy.childview.ChapterCardViewHolder;
@@ -46,8 +48,10 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
                 "Bound Service를 로컬,전용으로 생성하여 바인딩해본다.", BoundServiceActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_2), "Remote Bound Service",
                 "Bound Service를 원격으로 생성하여 바인딩하고, 데이터를 보내본다.", RemoteBoundServiceActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_3), "TEST3", "this is test1. this is test1. this is test1. this is test1."));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_4), "TEST4", "this is test1. this is test1. this is test1. this is test1."));
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_3), "Touch Event",
+                "Touch Event를 감지하여 관련 정보를 처리해본다.", MotionEventActivity.class));
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_4), "Gesture Detect",
+                "Gesture를 감지하여 관련 정보를 처리해본다.", CommonGesturesActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_5), "TEST5", "this is test1. this is test1. this is test1. this is test1."));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_6), "TEST6", "this is test1. this is test1. this is test1. this is test1."));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_7), "TEST7", "this is test1. this is test1. this is test1. this is test1."));

@@ -41,7 +41,11 @@
             android:name=".service.RemoteBoundService"
             android:enabled="true"
             android:exported="true"
-            android:process=":my_process"></service>
+            android:process=":my_process" />
+
+        <activity android:name=".activity.GridLayoutActivity" />
+        <activity android:name=".activity.MotionEventActivity" />
+        <activity android:name=".activity.CommonGesturesActivity"></activity>
     </application>
 
 </manifest>
