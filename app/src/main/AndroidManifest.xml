@@ -45,7 +45,9 @@
 
         <activity android:name=".activity.GridLayoutActivity" />
         <activity android:name=".activity.MotionEventActivity" />
-        <activity android:name=".activity.CommonGesturesActivity"></activity>
+        <activity android:name=".activity.CommonGesturesActivity" />
+        <activity android:name=".activity.FragmentActivity" />
+        <activity android:name=".activity.OverflowMenuActivity"></activity>
     </application>
 
 </manifest>

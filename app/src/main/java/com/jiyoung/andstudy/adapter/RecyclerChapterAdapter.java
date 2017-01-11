@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import com.jiyoung.andstudy.R;
 import com.jiyoung.andstudy.activity.BoundServiceActivity;
 import com.jiyoung.andstudy.activity.CommonGesturesActivity;
+import com.jiyoung.andstudy.activity.FragmentActivity;
 import com.jiyoung.andstudy.activity.MotionEventActivity;
 import com.jiyoung.andstudy.activity.RemoteBoundServiceActivity;
 import com.jiyoung.andstudy.activity.StateChangeActivity;
@@ -52,7 +53,8 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
                 "Touch Event를 감지하여 관련 정보를 처리해본다.", MotionEventActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_4), "Gesture Detect",
                 "Gesture를 감지하여 관련 정보를 처리해본다.", CommonGesturesActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_5), "TEST5", "this is test1. this is test1. this is test1. this is test1."));
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_5), "Fragment",
+                "Fragment의 기본 사용법을 알아본다.", FragmentActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_6), "TEST6", "this is test1. this is test1. this is test1. this is test1."));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_7), "TEST7", "this is test1. this is test1. this is test1. this is test1."));
     }
