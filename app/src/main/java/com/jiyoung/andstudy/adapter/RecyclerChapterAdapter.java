@@ -13,7 +13,9 @@ import com.jiyoung.andstudy.activity.FragmentActivity;
 import com.jiyoung.andstudy.activity.MotionEventActivity;
 import com.jiyoung.andstudy.activity.OverflowMenuActivity;
 import com.jiyoung.andstudy.activity.RemoteBoundServiceActivity;
+import com.jiyoung.andstudy.activity.SceneTransitionActivity;
 import com.jiyoung.andstudy.activity.StateChangeActivity;
+import com.jiyoung.andstudy.activity.TransitionActivity;
 import com.jiyoung.andstudy.childview.ChapterCardViewHolder;
 import com.jiyoung.andstudy.data.ChapterInfo;
 
@@ -44,6 +46,8 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
 
     public RecyclerChapterAdapter(Context context) {
         this.mContext = context;
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_7), "Scene Transition",
+                "Scene Transition의 기본 사용법을 알아본다.", SceneTransitionActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_0), "Activity State",
                 "Activity의 상태변화를 로그를 찍어 확인해보고, 동적 상태 데이터를 저장,복구해본다.", StateChangeActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_1), "Bound Service",
@@ -57,8 +61,9 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_5), "Fragment",
                 "Fragment의 기본 사용법을 알아본다.", FragmentActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_6), "Overflow Menu",
-                "Overflow Menu의 기본 사용법 알아본다.", OverflowMenuActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_7), "TEST7", "this is test1. this is test1. this is test1. this is test1."));
+                "Overflow Menu의 기본 사용법ㅇ.ㄹ 알아본다.", OverflowMenuActivity.class));
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_7), "Transition",
+                "Transition의 기본 사용법을 알아본다.", TransitionActivity.class));
     }
 
     @Override
