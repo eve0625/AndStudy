@@ -49,7 +49,11 @@
         <activity android:name=".activity.FragmentActivity" />
         <activity android:name=".activity.OverflowMenuActivity" />
         <activity android:name=".activity.TransitionActivity" />
-        <activity android:name=".activity.SceneTransitionActivity"></activity>
+        <activity android:name=".activity.SceneTransitionActivity" />
+        <activity
+            android:name=".activity.FloatingButtonActivity"
+            android:label="@string/title_activity_floating_button"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

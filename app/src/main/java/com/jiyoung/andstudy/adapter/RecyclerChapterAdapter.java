@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import com.jiyoung.andstudy.R;
 import com.jiyoung.andstudy.activity.BoundServiceActivity;
 import com.jiyoung.andstudy.activity.CommonGesturesActivity;
+import com.jiyoung.andstudy.activity.FloatingButtonActivity;
 import com.jiyoung.andstudy.activity.FragmentActivity;
 import com.jiyoung.andstudy.activity.MotionEventActivity;
 import com.jiyoung.andstudy.activity.OverflowMenuActivity;
@@ -46,6 +47,8 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
 
     public RecyclerChapterAdapter(Context context) {
         this.mContext = context;
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_6), "Floating Action Button",
+                "Floating Action Button 예제", FloatingButtonActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_7), "Scene Transition",
                 "Scene Transition의 기본 사용법을 알아본다.", SceneTransitionActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_0), "Activity State",
