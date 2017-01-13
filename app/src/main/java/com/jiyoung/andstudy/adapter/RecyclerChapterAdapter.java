@@ -16,6 +16,7 @@ import com.jiyoung.andstudy.activity.OverflowMenuActivity;
 import com.jiyoung.andstudy.activity.RemoteBoundServiceActivity;
 import com.jiyoung.andstudy.activity.SceneTransitionActivity;
 import com.jiyoung.andstudy.activity.StateChangeActivity;
+import com.jiyoung.andstudy.activity.TabLayoutActivity;
 import com.jiyoung.andstudy.activity.TransitionActivity;
 import com.jiyoung.andstudy.childview.ChapterCardViewHolder;
 import com.jiyoung.andstudy.data.ChapterInfo;
@@ -47,6 +48,8 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
 
     public RecyclerChapterAdapter(Context context) {
         this.mContext = context;
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_5), "TabLayout",
+                "TabLayout과 ViewPager를 연동하여 사용해본다.", TabLayoutActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_6), "Floating Action Button",
                 "Floating Action Button 예제", FloatingButtonActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_7), "Scene Transition",
