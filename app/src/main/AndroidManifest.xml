@@ -85,10 +85,25 @@
         <activity android:name=".activity.MyWebViewActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:scheme="http" />
             </intent-filter>
         </activity>
+        <activity android:name=".activity.SendBroadcastActivity" />
+
+        <receiver
+            android:name=".receiver.MyReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.jiyoung.andstudy.activity" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <activity android:name=".activity.ThreadActivity"></activity>
     </application>
 
 </manifest>
