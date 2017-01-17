@@ -21,6 +21,7 @@ import com.jiyoung.andstudy.activity.SceneTransitionActivity;
 import com.jiyoung.andstudy.activity.SendBroadcastActivity;
 import com.jiyoung.andstudy.activity.StateChangeActivity;
 import com.jiyoung.andstudy.activity.TabLayoutActivity;
+import com.jiyoung.andstudy.activity.ThreadActivity;
 import com.jiyoung.andstudy.activity.TransitionActivity;
 import com.jiyoung.andstudy.activity.WebsiteListActivity;
 import com.jiyoung.andstudy.childview.ChapterCardViewHolder;
@@ -53,6 +54,8 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
 
     public RecyclerChapterAdapter(Context context) {
         this.mContext = context;
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_8), "Thread",
+                "Thread 사용", ThreadActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_0), "Broadcast",
                 "Broadcast를 보내고 Receiver로 받아본다.", SendBroadcastActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_1), "Implicit Intent",
