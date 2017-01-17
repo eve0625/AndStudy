@@ -69,7 +69,7 @@
         <activity
             android:name=".activity.WebsiteListActivity"
             android:label="@string/title_website_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.WebsiteDetailActivity"
             android:label="@string/title_website_detail"
@@ -79,6 +79,8 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.jiyoung.andstudy.activity.WebsiteListActivity" />
         </activity>
+        <activity android:name=".activity.ExplicitIntentAActivity" />
+        <activity android:name=".activity.ExplicitIntentBActivity"></activity>
     </application>
 
 </manifest>
