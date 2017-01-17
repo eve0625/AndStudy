@@ -12,6 +12,7 @@ import com.jiyoung.andstudy.activity.CommonGesturesActivity;
 import com.jiyoung.andstudy.activity.FloatingButtonActivity;
 import com.jiyoung.andstudy.activity.FragmentActivity;
 import com.jiyoung.andstudy.activity.ExplicitIntentAActivity;
+import com.jiyoung.andstudy.activity.ImplicitIntentActivity;
 import com.jiyoung.andstudy.activity.MotionEventActivity;
 import com.jiyoung.andstudy.activity.NavigationDrawerActivity;
 import com.jiyoung.andstudy.activity.OverflowMenuActivity;
@@ -51,6 +52,8 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
 
     public RecyclerChapterAdapter(Context context) {
         this.mContext = context;
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_1), "Implicit Intent",
+                "암시적 Intent를 사용하여 Activity간 데이터를 전달해본다.", ImplicitIntentActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_2), "Explicit Intent",
                 "명시적 Intent를 사용하여 Activity간 데이터를 전달해본다.", ExplicitIntentAActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_3), "Master/Detail",

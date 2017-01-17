@@ -80,7 +80,15 @@
                 android:value="com.jiyoung.andstudy.activity.WebsiteListActivity" />
         </activity>
         <activity android:name=".activity.ExplicitIntentAActivity" />
-        <activity android:name=".activity.ExplicitIntentBActivity"></activity>
+        <activity android:name=".activity.ExplicitIntentBActivity" />
+        <activity android:name=".activity.ImplicitIntentActivity" />
+        <activity android:name=".activity.MyWebViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:scheme="http" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
