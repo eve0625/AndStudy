@@ -16,7 +16,7 @@ import android.widget.TextView;
 
 import com.jiyoung.andstudy.R;
 
-import com.jiyoung.andstudy.activity.dummy.DummyContent;
+import com.jiyoung.andstudy.data.DummyContent;
 
 import java.util.List;
 

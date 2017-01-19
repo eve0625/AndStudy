@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import com.jiyoung.andstudy.R;
 import com.jiyoung.andstudy.activity.BoundServiceActivity;
 import com.jiyoung.andstudy.activity.CommonGesturesActivity;
+import com.jiyoung.andstudy.activity.DatabaseActivity;
 import com.jiyoung.andstudy.activity.FloatingButtonActivity;
 import com.jiyoung.andstudy.activity.FragmentActivity;
 import com.jiyoung.andstudy.activity.ExplicitIntentAActivity;
@@ -54,6 +55,8 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
 
     public RecyclerChapterAdapter(Context context) {
         this.mContext = context;
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_7), "SQLite",
+                "DB에 레코드를 추가/조회/삭제 해보자!", DatabaseActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_8), "Thread",
                 "Thread 사용", ThreadActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_0), "Broadcast",

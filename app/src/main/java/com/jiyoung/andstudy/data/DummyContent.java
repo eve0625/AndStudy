@@ -1,4 +1,4 @@
-package com.jiyoung.andstudy.activity.dummy;
+package com.jiyoung.andstudy.data;
 
 import java.util.ArrayList;
 import java.util.HashMap;

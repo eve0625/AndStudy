@@ -103,7 +103,8 @@
             </intent-filter>
         </receiver>
 
-        <activity android:name=".activity.ThreadActivity"></activity>
+        <activity android:name=".activity.ThreadActivity" />
+        <activity android:name=".activity.DatabaseActivity"></activity>
     </application>
 
 </manifest>
