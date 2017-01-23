@@ -105,6 +105,13 @@
 
         <activity android:name=".activity.ThreadActivity" />
         <activity android:name=".activity.DatabaseActivity"></activity>
+
+        <provider
+            android:authorities="com.jiyoung.andstudy.provider.MyContentProvider"
+            android:name=".provider.MyContentProvider"
+            android:enabled="true"
+            android:exported="true">
+        </provider>
     </application>
 
 </manifest>

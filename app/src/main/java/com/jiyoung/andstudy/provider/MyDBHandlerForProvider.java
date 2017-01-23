@@ -1,12 +1,17 @@
-package com.jiyoung.andstudy.database;
+package com.jiyoung.andstudy.provider;
 
+import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-public class MyDBHandler extends SQLiteOpenHelper {
+import com.jiyoung.andstudy.database.Product;
+
+public class MyDBHandlerForProvider extends SQLiteOpenHelper {
+
+    private ContentResolver myCR;
 
     private static final int DATABASE_VERSION = 1;
     private static final String DATABASE_NAME = "products.db";
@@ -16,8 +21,9 @@ public class MyDBHandler extends SQLiteOpenHelper {
     public static final String COLUMN_PRODUCTNAME = "productname";
     public static final String COLUMN_QUANTITY = "quantity";
 
-    public MyDBHandler(Context context) {
+    public MyDBHandlerForProvider(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        myCR = context.getContentResolver();
     }
 
     @Override
@@ -40,19 +46,27 @@ public class MyDBHandler extends SQLiteOpenHelper {
         ContentValues values = new ContentValues();
         values.put(COLUMN_PRODUCTNAME, product.getProductname());
         values.put(COLUMN_QUANTITY, product.getQuantity());
-
+        /*
         SQLiteDatabase db = this.getWritableDatabase();
         db.insert(TABLE_PRODUCTS, null, values);
         db.close();
+        */
+        myCR.insert(MyContentProvider.CONTENT_URI, values);
     }
 
     public  Product findProduct(String productname) {
+        /*
         StringBuilder sbSQL = new StringBuilder(128);
         sbSQL.append("SELECT * FROM ").append(TABLE_PRODUCTS)
                 .append(" WHERE ").append(COLUMN_PRODUCTNAME).append("=\"").append(productname).append("\"");
 
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery(sbSQL.toString(), null);
+        */
+
+        String[] projection = {COLUMN_ID, COLUMN_PRODUCTNAME, COLUMN_QUANTITY};
+        String selection = "productname = \"" + productname + "\"";
+        Cursor cursor = myCR.query(MyContentProvider.CONTENT_URI, projection, selection, null, null);
 
         Product product = null;
         if (cursor.moveToFirst()) {
@@ -62,13 +76,14 @@ public class MyDBHandler extends SQLiteOpenHelper {
             product.setQuantity(cursor.getInt(2));
             cursor.close();
         }
-        db.close();
+        //db.close();
         return product;
     }
 
     public boolean deleteProduct(String productname) {
 
         boolean result = false;
+        /*
         StringBuilder sbSQL = new StringBuilder(128);
         sbSQL.append("SELECT * FROM ").append(TABLE_PRODUCTS)
                 .append(" WHERE ").append(COLUMN_PRODUCTNAME).append(" = \"").append(productname).append("\"");
@@ -83,6 +98,14 @@ public class MyDBHandler extends SQLiteOpenHelper {
             result = true;
         }
         db.close();
+        */
+
+        String selection = "productname = \"" + productname + "\"";
+        int rowsDeleted = myCR.delete(MyContentProvider.CONTENT_URI, selection, null);
+
+        if (rowsDeleted > 0)
+            result = true;
+
         return result;
     }
 }
