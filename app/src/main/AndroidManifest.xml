@@ -104,14 +104,15 @@
         </receiver>
 
         <activity android:name=".activity.ThreadActivity" />
-        <activity android:name=".activity.DatabaseActivity"></activity>
+        <activity android:name=".activity.DatabaseActivity" />
 
         <provider
-            android:authorities="com.jiyoung.andstudy.provider.MyContentProvider"
             android:name=".provider.MyContentProvider"
+            android:authorities="com.jiyoung.andstudy.provider.MyContentProvider"
             android:enabled="true"
-            android:exported="true">
-        </provider>
+            android:exported="true"></provider>
+
+        <activity android:name=".activity.StorageActivity"></activity>
     </application>
 
 </manifest>

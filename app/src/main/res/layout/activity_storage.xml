@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_storage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.jiyoung.andstudy.activity.StorageActivity">
+
+    <Button
+        android:id="@+id/btn_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New"
+        android:textAllCaps="false"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        />
+
+    <Button
+        android:id="@+id/btn_open"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open"
+        android:textAllCaps="false"
+        android:layout_alignBottom="@+id/btn_new"
+        android:layout_toRightOf="@+id/btn_new"
+        />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:textAllCaps="false"
+        android:layout_alignBottom="@+id/btn_open"
+        android:layout_toRightOf="@+id/btn_open"
+        />
+
+    <EditText
+        android:id="@+id/et_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/btn_new"
+        android:inputType="textMultiLine"
+        android:scrollbars="vertical"/>
+
+</RelativeLayout>

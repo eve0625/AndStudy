@@ -21,6 +21,7 @@ import com.jiyoung.andstudy.activity.RemoteBoundServiceActivity;
 import com.jiyoung.andstudy.activity.SceneTransitionActivity;
 import com.jiyoung.andstudy.activity.SendBroadcastActivity;
 import com.jiyoung.andstudy.activity.StateChangeActivity;
+import com.jiyoung.andstudy.activity.StorageActivity;
 import com.jiyoung.andstudy.activity.TabLayoutActivity;
 import com.jiyoung.andstudy.activity.ThreadActivity;
 import com.jiyoung.andstudy.activity.TransitionActivity;
@@ -55,6 +56,8 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
 
     public RecyclerChapterAdapter(Context context) {
         this.mContext = context;
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_6), "Storage",
+                "Cloud Storage의 데이터를 조회, 생성, 수정해보자!", StorageActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_7), "SQLite",
                 "DB에 레코드를 추가/조회/삭제 해보자!", DatabaseActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_8), "Thread",
