@@ -110,9 +110,10 @@
             android:name=".provider.MyContentProvider"
             android:authorities="com.jiyoung.andstudy.provider.MyContentProvider"
             android:enabled="true"
-            android:exported="true"></provider>
+            android:exported="true" />
 
-        <activity android:name=".activity.StorageActivity"></activity>
+        <activity android:name=".activity.StorageActivity" />
+        <activity android:name=".activity.VideoPlayerActivity"></activity>
     </application>
 
 </manifest>

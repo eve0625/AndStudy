@@ -25,6 +25,7 @@ import com.jiyoung.andstudy.activity.StorageActivity;
 import com.jiyoung.andstudy.activity.TabLayoutActivity;
 import com.jiyoung.andstudy.activity.ThreadActivity;
 import com.jiyoung.andstudy.activity.TransitionActivity;
+import com.jiyoung.andstudy.activity.VideoPlayerActivity;
 import com.jiyoung.andstudy.activity.WebsiteListActivity;
 import com.jiyoung.andstudy.childview.ChapterCardViewHolder;
 import com.jiyoung.andstudy.data.ChapterInfo;
@@ -56,6 +57,8 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
 
     public RecyclerChapterAdapter(Context context) {
         this.mContext = context;
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_5), "VideoView",
+                "VideoView와 MediaController를 사용하여 VideoPlayer를 구현해보자.", VideoPlayerActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_6), "Storage",
                 "Cloud Storage의 데이터를 조회, 생성, 수정해보자!", StorageActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_7), "SQLite",
