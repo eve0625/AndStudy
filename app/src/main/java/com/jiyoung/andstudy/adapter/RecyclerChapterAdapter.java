@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jiyoung.andstudy.R;
+import com.jiyoung.andstudy.activity.AudioActivity;
 import com.jiyoung.andstudy.activity.BoundServiceActivity;
 import com.jiyoung.andstudy.activity.CameraRecorderActivity;
 import com.jiyoung.andstudy.activity.CommonGesturesActivity;
@@ -18,6 +19,7 @@ import com.jiyoung.andstudy.activity.ImplicitIntentActivity;
 import com.jiyoung.andstudy.activity.MotionEventActivity;
 import com.jiyoung.andstudy.activity.NavigationDrawerActivity;
 import com.jiyoung.andstudy.activity.OverflowMenuActivity;
+import com.jiyoung.andstudy.activity.PermissionActivity;
 import com.jiyoung.andstudy.activity.RemoteBoundServiceActivity;
 import com.jiyoung.andstudy.activity.SceneTransitionActivity;
 import com.jiyoung.andstudy.activity.SendBroadcastActivity;
@@ -58,8 +60,14 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
 
     public RecyclerChapterAdapter(Context context) {
         this.mContext = context;
+
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_2), "Audio",
+                "Audio를 녹음하고 재생시켜본다.", AudioActivity.class));
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_3), "Runtime Permission",
+                "Runtime Permission 테스트", PermissionActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_4), "Camera",
                 "Camera를 동작시켜 동영상을 찍어 저장해보자!", CameraRecorderActivity.class));
+        /*
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_5), "VideoView",
                 "VideoView와 MediaController를 사용하여 VideoPlayer를 구현해보자.", VideoPlayerActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_6), "Storage",
@@ -100,6 +108,7 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
                 "Overflow Menu의 기본 사용법ㅇ.ㄹ 알아본다.", OverflowMenuActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_7), "Transition",
                 "Transition의 기본 사용법을 알아본다.", TransitionActivity.class));
+                */
     }
 
     @Override

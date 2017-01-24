@@ -3,6 +3,8 @@
     package="com.jiyoung.andstudy">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -114,7 +116,9 @@
 
         <activity android:name=".activity.StorageActivity" />
         <activity android:name=".activity.VideoPlayerActivity" />
-        <activity android:name=".activity.CameraRecorderActivity"></activity>
+        <activity android:name=".activity.CameraRecorderActivity" />
+        <activity android:name=".activity.PermissionActivity" />
+        <activity android:name=".activity.AudioActivity"></activity>
     </application>
 
 </manifest>
