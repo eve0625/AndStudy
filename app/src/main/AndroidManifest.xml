@@ -113,7 +113,8 @@
             android:exported="true" />
 
         <activity android:name=".activity.StorageActivity" />
-        <activity android:name=".activity.VideoPlayerActivity"></activity>
+        <activity android:name=".activity.VideoPlayerActivity" />
+        <activity android:name=".activity.CameraRecorderActivity"></activity>
     </application>
 
 </manifest>

@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 
 import com.jiyoung.andstudy.R;
 import com.jiyoung.andstudy.activity.BoundServiceActivity;
+import com.jiyoung.andstudy.activity.CameraRecorderActivity;
 import com.jiyoung.andstudy.activity.CommonGesturesActivity;
 import com.jiyoung.andstudy.activity.DatabaseActivity;
 import com.jiyoung.andstudy.activity.FloatingButtonActivity;
@@ -57,6 +58,8 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
 
     public RecyclerChapterAdapter(Context context) {
         this.mContext = context;
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_4), "Camera",
+                "Camera를 동작시켜 동영상을 찍어 저장해보자!", CameraRecorderActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_5), "VideoView",
                 "VideoView와 MediaController를 사용하여 VideoPlayer를 구현해보자.", VideoPlayerActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_6), "Storage",
