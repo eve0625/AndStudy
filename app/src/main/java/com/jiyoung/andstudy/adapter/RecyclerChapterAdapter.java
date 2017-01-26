@@ -11,6 +11,7 @@ import com.jiyoung.andstudy.activity.AudioActivity;
 import com.jiyoung.andstudy.activity.BoundServiceActivity;
 import com.jiyoung.andstudy.activity.CameraRecorderActivity;
 import com.jiyoung.andstudy.activity.CommonGesturesActivity;
+import com.jiyoung.andstudy.activity.CustomPrintActivity;
 import com.jiyoung.andstudy.activity.DatabaseActivity;
 import com.jiyoung.andstudy.activity.FloatingButtonActivity;
 import com.jiyoung.andstudy.activity.FragmentActivity;
@@ -63,7 +64,9 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
     public RecyclerChapterAdapter(Context context) {
         this.mContext = context;
 
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_1), "Print",
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_1), "Print Custom",
+                "Custom Document를 인쇄해본다.", CustomPrintActivity.class));
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_1), "Print Web",
                 "WebView의 HTML을 인쇄해본다.", WebPrintActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_2), "Audio",
                 "Audio를 녹음하고 재생시켜본다.", AudioActivity.class));
