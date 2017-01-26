@@ -15,6 +15,7 @@ import com.jiyoung.andstudy.activity.DatabaseActivity;
 import com.jiyoung.andstudy.activity.FloatingButtonActivity;
 import com.jiyoung.andstudy.activity.FragmentActivity;
 import com.jiyoung.andstudy.activity.ExplicitIntentAActivity;
+import com.jiyoung.andstudy.activity.HtmlPrintActivity;
 import com.jiyoung.andstudy.activity.ImplicitIntentActivity;
 import com.jiyoung.andstudy.activity.MotionEventActivity;
 import com.jiyoung.andstudy.activity.NavigationDrawerActivity;
@@ -29,6 +30,7 @@ import com.jiyoung.andstudy.activity.TabLayoutActivity;
 import com.jiyoung.andstudy.activity.ThreadActivity;
 import com.jiyoung.andstudy.activity.TransitionActivity;
 import com.jiyoung.andstudy.activity.VideoPlayerActivity;
+import com.jiyoung.andstudy.activity.WebPrintActivity;
 import com.jiyoung.andstudy.activity.WebsiteListActivity;
 import com.jiyoung.andstudy.childview.ChapterCardViewHolder;
 import com.jiyoung.andstudy.data.ChapterInfo;
@@ -61,6 +63,8 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
     public RecyclerChapterAdapter(Context context) {
         this.mContext = context;
 
+        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_1), "Print",
+                "WebView의 HTML을 인쇄해본다.", WebPrintActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_2), "Audio",
                 "Audio를 녹음하고 재생시켜본다.", AudioActivity.class));
         items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_3), "Runtime Permission",

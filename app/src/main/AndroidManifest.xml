@@ -118,7 +118,12 @@
         <activity android:name=".activity.VideoPlayerActivity" />
         <activity android:name=".activity.CameraRecorderActivity" />
         <activity android:name=".activity.PermissionActivity" />
-        <activity android:name=".activity.AudioActivity"></activity>
+        <activity android:name=".activity.AudioActivity" />
+        <activity android:name=".activity.HtmlPrintActivity" />
+        <activity
+            android:name=".activity.WebPrintActivity"
+            android:label="@string/title_activity_web_print"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

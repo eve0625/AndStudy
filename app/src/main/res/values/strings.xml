@@ -13,4 +13,5 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="title_website_list">Websites</string>
     <string name="title_website_detail">Website Detail</string>
+    <string name="title_activity_web_print">WebPrintActivity</string>
 </resources>
