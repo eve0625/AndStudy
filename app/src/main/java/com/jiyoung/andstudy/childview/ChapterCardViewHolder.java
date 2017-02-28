@@ -45,7 +45,7 @@ public class ChapterCardViewHolder extends RecyclerView.ViewHolder {
     public void setChapterInfo(ChapterInfo chapterInfo) {
         this.chapterInfo = chapterInfo;
 
-        imgThumb.setImageDrawable(chapterInfo.getImage());
+        imgThumb.setImageResource(chapterInfo.getImageId());
         tvTitle.setText(chapterInfo.getTitle());
         tvDesc.setText(chapterInfo.getDescription());
     }

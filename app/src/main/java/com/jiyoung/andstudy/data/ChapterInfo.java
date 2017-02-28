@@ -5,28 +5,28 @@ import android.graphics.drawable.Drawable;
 
 public class ChapterInfo {
 
-    Drawable image;
+    int imageId;
     String title;
     String description;
     Class mClass;
 
-    public ChapterInfo(Drawable image, String title, String description) {
-        this(image, title, description, null);
+    public ChapterInfo(int imageId, String title, String description) {
+        this(imageId, title, description, null);
     }
 
-    public ChapterInfo(Drawable image, String title, String description, Class mclass) {
-        this.image = image;
+    public ChapterInfo(int imageId, String title, String description, Class mclass) {
+        this.imageId = imageId;
         this.title = title;
         this.description = description;
         this.mClass = mclass;
     }
 
-    public Drawable getImage() {
-        return image;
+    public int getImageId() {
+        return imageId;
     }
 
-    public void setImage(Drawable image) {
-        this.image = image;
+    public void setImage(int imageId) {
+        this.imageId = imageId;
     }
 
     public String getTitle() {

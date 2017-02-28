@@ -64,58 +64,56 @@ public class RecyclerChapterAdapter extends RecyclerView.Adapter<ChapterCardView
     public RecyclerChapterAdapter(Context context) {
         this.mContext = context;
 
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_1), "Print Custom",
+        items.add(new ChapterInfo(R.drawable.android_image_1, "Print Custom",
                 "Custom Document를 인쇄해본다.", CustomPrintActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_1), "Print Web",
+        items.add(new ChapterInfo(R.drawable.android_image_1, "Print Web",
                 "WebView의 HTML을 인쇄해본다.", WebPrintActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_2), "Audio",
+        items.add(new ChapterInfo(R.drawable.android_image_2, "Audio",
                 "Audio를 녹음하고 재생시켜본다.", AudioActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_3), "Runtime Permission",
+        items.add(new ChapterInfo(R.drawable.android_image_3,"Runtime Permission",
                 "Runtime Permission 테스트", PermissionActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_4), "Camera",
+        items.add(new ChapterInfo(R.drawable.android_image_4, "Camera",
                 "Camera를 동작시켜 동영상을 찍어 저장해보자!", CameraRecorderActivity.class));
-        /*
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_5), "VideoView",
+        items.add(new ChapterInfo(R.drawable.android_image_5, "VideoView",
                 "VideoView와 MediaController를 사용하여 VideoPlayer를 구현해보자.", VideoPlayerActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_6), "Storage",
+        items.add(new ChapterInfo(R.drawable.android_image_6, "Storage",
                 "Cloud Storage의 데이터를 조회, 생성, 수정해보자!", StorageActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_7), "SQLite",
+        items.add(new ChapterInfo(R.drawable.android_image_7, "SQLite",
                 "DB에 레코드를 추가/조회/삭제 해보자!", DatabaseActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.android_image_8), "Thread",
+        items.add(new ChapterInfo(R.drawable.android_image_8, "Thread",
                 "Thread 사용", ThreadActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_0), "Broadcast",
+        items.add(new ChapterInfo(R.drawable.sample_0, "Broadcast",
                 "Broadcast를 보내고 Receiver로 받아본다.", SendBroadcastActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_1), "Implicit Intent",
+        items.add(new ChapterInfo(R.drawable.sample_1, "Implicit Intent",
                 "암시적 Intent를 사용하여 Activity간 데이터를 전달해본다.", ImplicitIntentActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_2), "Explicit Intent",
+        items.add(new ChapterInfo(R.drawable.sample_2, "Explicit Intent",
                 "명시적 Intent를 사용하여 Activity간 데이터를 전달해본다.", ExplicitIntentAActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_3), "Master/Detail",
+        items.add(new ChapterInfo(R.drawable.sample_3, "Master/Detail",
                 "Master/Detail 구조를 사용해본다.", WebsiteListActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_4), "DrawerLayout",
+        items.add(new ChapterInfo(R.drawable.sample_4, "DrawerLayout",
                 "Drawer 메뉴를 사용해본다.", NavigationDrawerActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_5), "TabLayout",
+        items.add(new ChapterInfo(R.drawable.sample_5, "TabLayout",
                 "TabLayout과 ViewPager를 연동하여 사용해본다.", TabLayoutActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_6), "Floating Action Button",
+        items.add(new ChapterInfo(R.drawable.sample_6, "Floating Action Button",
                 "Floating Action Button 예제", FloatingButtonActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_7), "Scene Transition",
+        items.add(new ChapterInfo(R.drawable.sample_7, "Scene Transition",
                 "Scene Transition의 기본 사용법을 알아본다.", SceneTransitionActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_0), "Activity State",
+        items.add(new ChapterInfo(R.drawable.sample_0, "Activity State",
                 "Activity의 상태변화를 로그를 찍어 확인해보고, 동적 상태 데이터를 저장,복구해본다.", StateChangeActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_1), "Bound Service",
+        items.add(new ChapterInfo(R.drawable.sample_1, "Bound Service",
                 "Bound Service를 로컬,전용으로 생성하여 바인딩해본다.", BoundServiceActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_2), "Remote Bound Service",
+        items.add(new ChapterInfo(R.drawable.sample_2, "Remote Bound Service",
                 "Bound Service를 원격으로 생성하여 바인딩하고, 데이터를 보내본다.", RemoteBoundServiceActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_3), "Touch Event",
+        items.add(new ChapterInfo(R.drawable.sample_3, "Touch Event",
                 "Touch Event를 감지하여 관련 정보를 처리해본다.", MotionEventActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_4), "Gesture Detect",
+        items.add(new ChapterInfo(R.drawable.sample_4, "Gesture Detect",
                 "Gesture를 감지하여 관련 정보를 처리해본다.", CommonGesturesActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_5), "Fragment",
+        items.add(new ChapterInfo(R.drawable.sample_5, "Fragment",
                 "Fragment의 기본 사용법을 알아본다.", FragmentActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_6), "Overflow Menu",
+        items.add(new ChapterInfo(R.drawable.sample_6, "Overflow Menu",
                 "Overflow Menu의 기본 사용법ㅇ.ㄹ 알아본다.", OverflowMenuActivity.class));
-        items.add(new ChapterInfo(context.getResources().getDrawable(R.drawable.sample_7), "Transition",
+        items.add(new ChapterInfo(R.drawable.sample_7, "Transition",
                 "Transition의 기본 사용법을 알아본다.", TransitionActivity.class));
-                */
     }
 
     @Override
